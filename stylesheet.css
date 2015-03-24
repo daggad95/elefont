@@ -82,7 +82,7 @@ a.navlink:hover {
 	margin-right: auto;
 	width: 1200px;
 	margin-top: 75;
-	text-align: left;
+	text-align: center;
 }
 
 #footer {
@@ -94,8 +94,7 @@ a.navlink:hover {
 
 .cake {
 	float: left;
-	margin-left: 10%;
-	width: 40%;
+	width: 45%;
 }
 
 .cake > p {
@@ -103,9 +102,11 @@ a.navlink:hover {
 	padding-top: 0;
 	font-size: 28px;
 	font-family: 'Euphoria Script', cursive;
+	text-align: left;
 }
 
 .cake > h1 {
+	text-align: center;
 	margin-top: 0;
 	padding-top: 0;
 	font-size: 50px;
@@ -114,8 +115,8 @@ a.navlink:hover {
 }
 
 .frosting {
-	margin-left: 60%;
-	width: 40%;
+	float: right;
+	width: 45%;
 }
 
 .frosting > p {
@@ -123,9 +124,11 @@ a.navlink:hover {
 	padding-top: 0;
 	font-size: 28px;
 	font-family: 'Euphoria Script', cursive;
+	text-align: left;
 }
 
 .frosting > h1 {
+	text-align: center;
 	margin-top: 0;
 	padding-top: 0;
 	font-size: 50px;
@@ -137,10 +140,14 @@ a.navlink:hover {
 
 .index-image {
 	float: left;
-	width: 290px;
-	height: 290px;
-	padding: 5px;
-	
+	width: 298px;
+	height: 298px;
+	border: 1px solid black;
+}
+
+#index-images {
+	display: inline-block;
+	box-shadow: 5px 5px 5px #888888;
 }
 
 #slogan {
@@ -148,4 +155,67 @@ a.navlink:hover {
 	text-align: center;
 	font-size: 40px;
 	font-family: 'Euphoria Script', cursive;
+}
+
+/* BLOG */
+
+.fb-like-box {
+	margin-left: 200px;
+	margin-right: 200px;
+}
+
+/* CONTACT PAGE */
+
+#contact-info {
+	display: inline-block;
+	text-align: left;
+}
+
+#contact-info > h1 {
+	color: rgb(2, 132, 130);
+	font-size: 40px;
+	font-family: 'Euphoria Script', cursive;
+}
+
+#email-form {
+	display: block;
+	border-top: 1px solid rgb(2, 132, 130);
+}
+
+#email-form > textarea {
+	width: 500px;
+	height: 200px;
+	border-radius: 10px;
+	border-color: rgb(2, 132, 130);
+	font-size: 20px;
+	font-family: arial;
+	resize: none;
+}
+
+#client-addr {
+	width: 500px;
+	height: 50px;
+	border: 1px solid;
+	border-radius: 10px;
+	border-color: rgb(2, 132, 130);
+	font-size: 20px;
+	font-family: arial;
+	text-align: center;
+}
+
+#email-form > h1 {
+	color: rgb(2, 132, 130);
+	font-size: 40px;
+	font-family: 'Euphoria Script', cursive;
+}
+
+#email-submit {
+	width: 150px;
+	height: 50px;
+	background-color: white;
+	color: rgb(2, 132, 130);
+	font-size: 30px;
+	font-family: 'Euphoria Script', cursive;
+	border-radius: 10px;
+	margin-top: 10px;
 }

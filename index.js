@@ -8,6 +8,10 @@ window.onload　= function() {
 	}
 	console.log(images);
 
+	var div = document.createElement("div");
+	div.id = "index-images";
+	content.appendChild(div);
+
 	for (i = 0; i < 8; i++) {
 		var index = Math.round((Math.random()*(images.length-1)));
 		var img = document.createElement("img");
@@ -15,7 +19,8 @@ window.onload　= function() {
 		img.className = "index-image";
 		img.id = i;
 		img.src = images[index];
-		content.appendChild(img);
+		img.height = img.width;
+		div.appendChild(img);
 		$("#"+i).hide();
 		images.splice(index, 1);
 	}
