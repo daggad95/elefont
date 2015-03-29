@@ -2,7 +2,7 @@
 
 <?php renderHeader("Contact"); ?>
 	<div id="contact-info">
-		<h1>Email: elephont@gmail.com</h1>
+		<h1>Email: elefont@comcast.net</h1>
 		<h1>Phone: 360-402-3028</h1>
 	</div>
 
