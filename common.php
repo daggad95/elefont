@@ -8,7 +8,7 @@
 			<head>
 				<meta charset='utf-8'>
 			  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-			  <meta name='viewport' content='width=device-width, initial-scale=1'>
+			  <meta name='viewport' content='width=device-width initial-scale=1'/>
 
 			  <link href='stylesheet.css' rel='stylesheet'>
 			  <link href='http://fonts.googleapis.com/css?family=Euphoria+Script' rel='stylesheet' type='text/css'>
@@ -24,14 +24,12 @@
 					<a href='portfolio.php' class='navlink'>Portfolio</a>
 				</div>
 
-				<div class='pink-overlay'>
-					<div id='stylebar'>
-						<div id='logo'>
-							<img src='pictures/logo.png'>
-						</div>
-						<div id='title'>
-							<p class='vertical-align'>$title</p>
-						</div>
+				<div id='stylebar'>
+					<div id='logo'>
+						<img src='pictures/logo.png'>
+					</div>
+					<div id='title'>
+						<p class='vertical-align'>$title</p>
 					</div>
 				</div>
 
@@ -42,7 +40,6 @@
 	function renderFooter() {
 		echo "
 				</div>
-				<div id='footer'></div>
 			</body>
 		</html>
 		";

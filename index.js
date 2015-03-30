@@ -1,6 +1,7 @@
 window.onload　= function() {
 	var content = document.getElementById("content");
 	var files = 14;
+	var imgNum = 10;
 	var images = new Array();
 
 	for (i = 1; i <= files; i++) {
@@ -12,27 +13,26 @@ window.onload　= function() {
 	div.id = "index-images";
 	content.appendChild(div);
 
-	for (i = 0; i < 8; i++) {
+	for (i = 0; i < imgNum; i++) {
 		var index = Math.round((Math.random()*(images.length-1)));
 		var img = document.createElement("img");
 
 		img.className = "index-image";
 		img.id = i;
 		img.src = images[index];
-		img.height = img.width;
 		div.appendChild(img);
 		$("#"+i).hide();
 		images.splice(index, 1);
 	}
-	for (i = 0; i < 8; i++) {
+	for (i = 0; i < imgNum; i++) {
 		$("#"+i).fadeIn();
 	}
 
 	var lastChange = 0;
 	setInterval(function(){ 
-		var imgnum = Math.round((Math.random()*8));
+		var imgnum = Math.round((Math.random()*imgNum));
 		while (imgnum == lastChange) {
-			imgnum = Math.round((Math.random()*8));
+			imgnum = Math.round((Math.random()*imgNum));
 		}
 		lastChange = imgnum;
 
@@ -52,3 +52,4 @@ window.onload　= function() {
 		$("#"+imgnum).fadeIn(1000);
 	}, 4000);
 }
+

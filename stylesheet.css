@@ -1,5 +1,6 @@
 body {
-	margin: 0px;
+	margin: 0;
+	padding: 0;
 	text-align: center;
 }
 
@@ -18,20 +19,21 @@ body {
 	top: 0px;
 	background-color: white;
 	height: 5vw;
+	line-height: 5vw;
 	text-align: center;
 	margin: 0px;
 	padding: 0px;
-	box-shadow: 0px 1px 5px #888888;
+	box-shadow: 0px 0.1vw 0.5vw #888888;
 }
 
 a.navlink {
 	font-family: arial;
-	font-size: 1vw;
-	margin-right: 20px;
-	margin-left: 20px;
-	line-height: 5vw;
+	font-size: 20px;
+	margin-right: 0.75vw;
+	margin-left: 0.75vw;
 	color: rgb(2, 132, 130);
 	text-decoration: none;
+	vertical-align: middle;
 }
 
 a.navlink:hover {
@@ -39,14 +41,18 @@ a.navlink:hover {
 }
 
 #stylebar {
+	position: relative;
 	margin-top: 5vw;
-	height: 250px;
+	margin-left: 0;
+	margin-right: 0;
+	padding: 0;
+	height: 13vw;
 	background-image: linear-gradient(to bottom, rgba(255, 102, 102, 0.9) 0%, rgba(255, 102, 102, 0.9) 100%), url("pictures/cupcake.jpg");
 	background-repeat: no-repeat;
 	background-color: rgb(255, 102, 102);
 	background-position: 50% 30%;
 	background-size: cover; 
-	box-shadow: 0px 10px 5px #888888;
+	box-shadow: 0px 0.1vw 1vw #888888;
 }
 
 
@@ -58,7 +64,7 @@ a.navlink:hover {
 }
 
 #title > p {
-	font-size: 100px;
+	font-size: 6vw;
 	font-family: 'Euphoria Script', cursive;
 	color: rgb(2, 132, 130);
 	margin: 0;
@@ -71,8 +77,8 @@ a.navlink:hover {
 }
 
 #logo > img {		img.src = "pictures/cake.jpg";
-	margin-top: 5px;
-	height: 240px;
+	height: 12vw;
+	margin-top: 0.5vw;
 	float: right;
 }
 
@@ -80,13 +86,13 @@ a.navlink:hover {
 	display: inline-block;
 	margin-left: auto;
 	margin-right: auto;
-	width: 1200px;
-	margin-top: 75;
+	width: 100%;
+	margin-top: 3vw;
 	text-align: center;
 }
 
 #footer {
-	height: 25px;
+	height: 2vw;
 }
 
 
@@ -94,7 +100,8 @@ a.navlink:hover {
 
 .cake {
 	float: left;
-	width: 45%;
+	margin-left: 15%;
+	width: 30%;
 }
 
 .cake > p {
@@ -116,7 +123,8 @@ a.navlink:hover {
 
 .frosting {
 	float: right;
-	width: 45%;
+	margin-right: 15%;
+	width: 30%;
 }
 
 .frosting > p {
@@ -140,28 +148,28 @@ a.navlink:hover {
 
 .index-image {
 	float: left;
-	width: 298px;
-	height: 298px;
-	border: 1px solid black;
+	width: 20%;
+	height: 20vw;
 }
 
 #index-images {
 	display: inline-block;
-	box-shadow: 5px 5px 5px #888888;
 }
 
 #slogan {
 	color: rgb(2, 132, 130);
 	text-align: center;
-	font-size: 40px;
+	font-size: 2vw;
 	font-family: 'Euphoria Script', cursive;
 }
 
 /* BLOG */
 
-.fb-like-box {
-	margin-left: 200px;
-	margin-right: 200px;
+#fb-root {
+  display: none;
+}
+.fb_iframe_widget, .fb_iframe_widget span, .fb_iframe_widget span iframe[style] {
+  	width: 100% !important;
 }
 
 /* CONTACT PAGE */
@@ -218,4 +226,30 @@ a.navlink:hover {
 	font-family: 'Euphoria Script', cursive;
 	border-radius: 10px;
 	margin-top: 10px;
+}
+
+@media all and (max-width: 480px) {
+	a.navlink {
+		font-size: 10px;
+	}
+	.cake {
+		margin-left: 5%;
+		width: 40%;
+	}
+	.cake > p {
+		font-size: 12px;
+	}
+	.cake > h1 {
+		font-size: 28px;
+	}
+	.frosting {
+		width: 40%;
+		margin-right: 5%;
+	}
+	.frosting > p {
+		font-size: 12px;
+	}
+	.frosting > h1 {
+		font-size: 28px;
+	}
 }
