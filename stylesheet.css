@@ -67,7 +67,9 @@ a:hover {
 
 .column {
 	float: left;
-	width: 50%;
+	width: 45%;
+	margin-left: 2.5%;
+	margin-right: 2.5%;
 }
 
 /***********************/
@@ -142,8 +144,6 @@ a:hover {
 p.cakepage {
 	border: 1px solid rgb(2, 132, 130);
 	padding: 10px;
-	margin-left: 20px;
-	margin-right: 20px;
 	border-radius: 10px;
 	text-align: left;
 }
