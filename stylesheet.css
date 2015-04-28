@@ -1,255 +1,150 @@
+/***********************/
+/********SHARED*********/
+/***********************/
+
 body {
-	margin: 0;
-	padding: 0;
-	text-align: center;
-}
-
-.vertical-align {
-	position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-#navbar {
-	position: fixed;
-	width: 100%;
-	z-index: 1000000;
-	top: 0px;
-	background-color: white;
-	height: 5vw;
-	line-height: 5vw;
-	text-align: center;
-	margin: 0px;
 	padding: 0px;
-	box-shadow: 0px 0.1vw 0.5vw #888888;
+	margin: 0px;
 }
 
-a.navlink {
-	font-family: arial;
-	font-size: 20px;
-	margin-right: 0.75vw;
-	margin-left: 0.75vw;
+body, .content strong {
+	font-family: 'Euphoria Script', cursive;
+}
+
+#navbar a, .content  p {
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+a, body {
 	color: rgb(2, 132, 130);
-	text-decoration: none;
-	vertical-align: middle;
 }
 
-a.navlink:hover {
+a {
+	text-decoration: none;
+}
+
+a:hover {
 	color: rgb(255, 102, 102);
 }
 
-#stylebar {
-	position: relative;
-	margin-top: 5vw;
-	margin-left: 0;
-	margin-right: 0;
-	padding: 0;
-	height: 13vw;
-	background-image: linear-gradient(to bottom, rgba(255, 102, 102, 0.9) 0%, rgba(255, 102, 102, 0.9) 100%), url("pictures/cupcake.jpg");
-	background-repeat: no-repeat;
-	background-color: rgb(255, 102, 102);
-	background-position: 50% 30%;
-	background-size: cover; 
-	box-shadow: 0px 0.1vw 1vw #888888;
-}
-
-
-#title {
-	margin-left: 30%;
+.content {
+	margin-top: 50px;
 	width: 40%;
-	height: 100%;
-	text-align: center;
-}
-
-#title > p {
-	font-size: 6vw;
-	font-family: 'Euphoria Script', cursive;
-	color: rgb(2, 132, 130);
-	margin: 0;
-	padding: 0;
-}
-
-#logo {
-	width: 30%;
-	float: left;
-}
-
-#logo > img {		img.src = "pictures/cake.jpg";
-	height: 12vw;
-	margin-top: 0.5vw;
-	float: right;
-}
-
-#content {
-	display: inline-block;
+	min-width: 400px;
 	margin-left: auto;
 	margin-right: auto;
+	text-align: center;
+}
+
+.content  h1 {
+	text-align: center;
+	margin: 10px;
+	font-size: 48pt;
+}
+
+.content  p {
+	font-size: 16pt;
+	text-align: justify;
+}
+
+
+.content  p > strong {
+	font-size: 24pt;
+}
+
+.indent {
+	text-indent: 50px;
+}
+
+.centered {
+	display: inline-block;
+}
+
+/***********************/
+/********HEADER*********/
+/***********************/
+
+#navbar {
+	position: fixed;
+	padding: 20px;
 	width: 100%;
-	margin-top: 3vw;
+	box-shadow: 0px 1px 1px grey;
 	text-align: center;
-}
-
-#footer {
-	height: 2vw;
-}
-
-
-/* CAKE PAGE */
-
-.cake {
-	float: left;
-	margin-left: 15%;
-	width: 30%;
-}
-
-.cake > p {
-	margin-top: 0;
-	padding-top: 0;
-	font-size: 28px;
-	font-family: 'Euphoria Script', cursive;
-	text-align: left;
-}
-
-.cake > h1 {
-	text-align: center;
-	margin-top: 0;
-	padding-top: 0;
-	font-size: 50px;
-	color: rgb(2, 132, 130);
-	font-family: 'Euphoria Script', cursive;
-}
-
-.frosting {
-	float: right;
-	margin-right: 15%;
-	width: 30%;
-}
-
-.frosting > p {
-	margin-top: 0;
-	padding-top: 0;
-	font-size: 28px;
-	font-family: 'Euphoria Script', cursive;
-	text-align: left;
-}
-
-.frosting > h1 {
-	text-align: center;
-	margin-top: 0;
-	padding-top: 0;
-	font-size: 50px;
-	color: rgb(2, 132, 130);
-	font-family: 'Euphoria Script', cursive;
-}
-
-/* INDEX PAGE */
-
-.index-image {
-	float: left;
-	width: 20%;
-	height: 20vw;
-}
-
-#index-images {
-	display: inline-block;
-}
-
-#slogan {
-	color: rgb(2, 132, 130);
-	text-align: center;
-	font-size: 2vw;
-	font-family: 'Euphoria Script', cursive;
-}
-
-/* BLOG */
-
-#fb-root {
-  display: none;
-}
-.fb_iframe_widget, .fb_iframe_widget span, .fb_iframe_widget span iframe[style] {
-  	width: 100% !important;
-}
-
-/* CONTACT PAGE */
-
-#contact-info {
-	display: inline-block;
-	text-align: left;
-}
-
-#contact-info > h1 {
-	color: rgb(2, 132, 130);
-	font-size: 40px;
-	font-family: 'Euphoria Script', cursive;
-}
-
-#email-form {
-	display: block;
-	border-top: 1px solid rgb(2, 132, 130);
-}
-
-#email-form > textarea {
-	width: 500px;
-	height: 200px;
-	border-radius: 10px;
-	border-color: rgb(2, 132, 130);
-	font-size: 20px;
-	font-family: arial;
-	resize: none;
-}
-
-#client-addr {
-	width: 500px;
-	height: 50px;
-	border: 1px solid;
-	border-radius: 10px;
-	border-color: rgb(2, 132, 130);
-	font-size: 20px;
-	font-family: arial;
-	text-align: center;
-}
-
-#email-form > h1 {
-	color: rgb(2, 132, 130);
-	font-size: 40px;
-	font-family: 'Euphoria Script', cursive;
-}
-
-#email-submit {
-	width: 150px;
-	height: 50px;
 	background-color: white;
-	color: rgb(2, 132, 130);
-	font-size: 30px;
-	font-family: 'Euphoria Script', cursive;
-	border-radius: 10px;
-	margin-top: 10px;
 }
 
-@media all and (max-width: 480px) {
-	a.navlink {
-		font-size: 10px;
-	}
-	.cake {
-		margin-left: 5%;
-		width: 40%;
-	}
-	.cake > p {
-		font-size: 12px;
-	}
-	.cake > h1 {
-		font-size: 28px;
-	}
-	.frosting {
-		width: 40%;
-		margin-right: 5%;
-	}
-	.frosting > p {
-		font-size: 12px;
-	}
-	.frosting > h1 {
-		font-size: 28px;
-	}
+#navbar a {
+	padding: 10px;
+	font-size: 16pt;
 }
+
+#stylebar {
+	text-align: center;
+	background-image: url("pictures/cupcake.jpg");
+	box-shadow: 0px 5px 5px grey;
+	padding-top: 65px;
+}
+
+#stylebar h1 {
+	display: inline;
+	font-size: 7vw;
+	font-weight: normal;
+}
+
+#stylebar img {
+	padding: 10px;
+	vertical-align: middle;
+	height: 15vw;
+}
+
+#stylebar div {
+	background-color: rgba(255, 102, 102, 0.9);
+}
+
+/***********************/
+/*********INDEX*********/
+/***********************/
+
+#imgbox {
+	margin-top: 50px;
+	width: 500px;
+	height: 500px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 50px;
+	overflow: hidden;
+}
+
+#imgbox img {
+	display: inline-block;
+	padding: 0px;
+	margin: 0px;
+
+	width: 33%;
+	height: 33%;
+	float: left;
+}
+
+/***********************/
+/*********CAKES*********/
+/***********************/
+
+p.cakepage {
+	border: 1px solid rgb(2, 132, 130);
+	padding: 10px;
+	margin: 5px;
+	border-radius: 10px;
+	text-align: left;
+}
+
+h1.cakepage {
+	margin-top: 50px;
+}
+
+/***********************/
+/********CONTACT********/
+/***********************/
+
+/***********************/
+/*********BLOG**********/
+/***********************/

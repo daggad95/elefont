@@ -1,55 +1,64 @@
-window.onload　= function() {
-	var content = document.getElementById("content");
-	var files = 14;
-	var imgNum = 10;
-	var images = new Array();
+$(function(){
+	$("#imgbox").hide();
 
-	for (i = 1; i <= files; i++) {
-		images[images.length] = "pictures/index/" + i + ".jpg";
-	}
-	console.log(images);
+	//getting images and setting timed changes
+	$.ajax({url: "get_pictures.php", success: function(result){
+		var imgs = JSON.parse(result);
+		var current_imgs = new Array();
 
-	var div = document.createElement("div");
-	div.id = "index-images";
-	content.appendChild(div);
-
-	for (i = 0; i < imgNum; i++) {
-		var index = Math.round((Math.random()*(images.length-1)));
-		var img = document.createElement("img");
-
-		img.className = "index-image";
-		img.id = i;
-		img.src = images[index];
-		div.appendChild(img);
-		$("#"+i).hide();
-		images.splice(index, 1);
-	}
-	for (i = 0; i < imgNum; i++) {
-		$("#"+i).fadeIn();
-	}
-
-	var lastChange = 0;
-	setInterval(function(){ 
-		var imgnum = Math.round((Math.random()*imgNum));
-		while (imgnum == lastChange) {
-			imgnum = Math.round((Math.random()*imgNum));
+		//setting original images
+		for (var i = 1; i <= 9; i++) {
+			img = unique_random(current_imgs, imgs);
+			current_imgs.push(img);
+			$("#imgbox :nth-child(" + i +")").attr("src", imgs[img]);
 		}
-		lastChange = imgnum;
 
-		var index = Math.round((Math.random()*(images.length-1)));
-		var img = document.getElementById(imgnum);
-		var source = img.src;
+		$("#imgbox").fadeIn();
 
-		$("#"+imgnum).fadeOut(1000);
+		//the index of the img to be replaced
+		var oldImg = Math.floor((Math.random() * 9) + 1);
 
-		setTimeout(function() {
-			img.src = images[index];
-			images.splice(index, 1);
-			images[images.length] = source;
-		}, 1000);
+		//the index of the new img in the img array
+		var newImg;
 
+		//used to prevent repetition of img change
+		var lastOld = -1; 
 
-		$("#"+imgnum).fadeIn(1000);
-	}, 4000);
+		//changing images
+		setInterval(function() {
+
+			//preventing repetition
+			while (lastOld == oldImg) {
+				oldImg = Math.floor((Math.random() * 9) + 1);
+			}
+
+			newImg = unique_random(current_imgs, imgs);
+			current_imgs.push(newImg);
+
+			//removing old img from current_imgs
+			current_imgs.splice($.inArray($.inArray($("#imgbox :nth-child(" + oldImg
+				 +")").attr("src"), imgs), current_imgs), 1);
+
+			lastOld = oldImg;
+
+			//fading out old image and fading in new image
+			$("#imgbox :nth-child(" + oldImg +")").fadeOut(1000, function() {
+				$("#imgbox :nth-child(" + oldImg +")").attr("src", imgs[newImg]);
+			});
+			$("#imgbox :nth-child(" + oldImg +")").fadeIn(1000);
+
+		}, 3000);
+
+   }});
+
+});
+
+//returns a random index from the second array that is not
+//contained withing the first array.
+function unique_random(current_imgs, imgs) {
+	var img = Math.floor((Math.random() * imgs.length));
+	while ($.inArray(img, current_imgs) >= 0) {
+		img = Math.floor((Math.random() * imgs.length));
+	}
+	return img;
 }
-

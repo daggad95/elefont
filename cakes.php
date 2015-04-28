@@ -1,36 +1,22 @@
-<?php 
-	include "common.php"; 
-
-	function renderCakes() {
-		$cakefile = fopen("cakes.txt", "r") or die("Cakes not found!");
-		echo "<div class='cake'>";
-		echo "<h1>Cakes</h1>";
-		while (!feof($cakefile)) {
-			$cake = fgets($cakefile);
-			$cakeDesc = fgets($cakefile);
-
-			echo "<p><b>" . $cake . "- </b>" . $cakeDesc . "</p>";
-		}
-		echo "</div>";
-		fclose($cakefile);
-	}
-
-	function renderFrostings() {
-		$frostingfile = fopen("frostings.txt", "r") or die("Frostings not found!");
-		echo "<div class='frosting'>";
-		echo "<h1>Frostings</h1>";
-		while (!feof($frostingfile)) {
-			$frosting = fgets($frostingfile );
-			$frostingDesc = fgets($frostingfile );
-
-			echo "<p><b>" . $frosting . "- </b>" . $frostingDesc . "</p>";
-		}
-		echo "</div>";
-		fclose($frostingfile);
-	}
-?>
-
-<?php renderHeader("Cakes"); ?>
-<?php renderCakes(); ?>
-<?php renderFrostings(); ?>
-<?php renderFooter(); ?>
+<?php include "header.php"; ?>
+	<div class="content">
+		<h1 class="cakepage">Cakes</h1>
+		<?php 
+			foreach (file("cakes.txt") as $cake) {
+				list($name, $description) = explode(":", $cake);
+		?>
+				<p class="cakepage"><strong><?="$name - "?></strong><?=$description?></p>
+		<?php
+			}
+		?>
+		<h1 class="cakepage">Frostings</h1>
+				<?php 
+			foreach (file("frostings.txt") as $frosting) {
+				list($name, $description) = explode(":", $frosting);
+		?>
+				<p class="cakepage"><strong><?="$name - "?></strong><?=$description?></p>
+		<?php
+			}
+		?>
+	</div>
+<?php include "footer.php"; ?>

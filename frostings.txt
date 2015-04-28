@@ -1,10 +1,5 @@
-Cream Cheese 
-Smooth, tangy, and sweet. A sumptuous cream cheese frosting flavored with vanilla bean or orange zest.
-American Buttercream 
-Creamy and decadent, a classic buttercream frosting. 
-Italian Meringue Buttercream 
-Silky, buttery, melt-in-your-mouth. Not quite as sweet or heavy as a traditional American Buttercream.
-White Mountain 
-A delicate, light-as-air frosting named for the mountain-like peaks it forms when beaten. Reminiscent of marshmallow cream.
-Stabilized Whipped Cream
-light and fluffy confection made with local, organic cream. 
+Cream Cheese:Smooth, tangy, and sweet. A sumptuous cream cheese frosting flavored with vanilla bean or orange zest.
+American Buttercream:Creamy and decadent, a classic buttercream frosting.
+Italian Meringue Buttercream:Silky, buttery, melt-in-your-mouth. Not quite as sweet or heavy as a traditional American Buttercream.
+White Mountain:A delicate, light-as-air frosting named for the mountain-like peaks it forms when beaten. Reminiscent of marshmallow cream.
+Stabilized Whipped Cream:light and fluffy confection made with local, organic cream.
