@@ -1,6 +1,7 @@
 <?php include "header.php"; ?>
 	<div class="content">
 		<div class="centered">
+			<h1>Contact Information</h1>
 			<p><strong>Email: </strong> elefont@comcast.net</p>
 			<p><strong>Phone: </strong> (360) 402-3028</p>
 			<p><strong>Calling Hours: </strong> 5pm-7pm</p>

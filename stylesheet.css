@@ -40,6 +40,7 @@ a:hover {
 	text-align: center;
 	margin: 10px;
 	font-size: 48pt;
+	border-bottom: 1px solid rgb(2, 132, 130);
 }
 
 .content  p {
@@ -58,6 +59,11 @@ a:hover {
 
 .centered {
 	display: inline-block;
+}
+
+.column {
+	float: left;
+	width: 50%;
 }
 
 /***********************/
