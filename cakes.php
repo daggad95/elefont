@@ -1,5 +1,5 @@
 <?php include "header.php"; ?>
-	<div class="content">
+	<div class="content wide">
 		<div class="column">
 			<h1 class="cakepage">Cakes</h1>
 			<?php 

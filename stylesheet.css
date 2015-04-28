@@ -36,6 +36,10 @@ a:hover {
 	text-align: center;
 }
 
+.wide {
+	width: 70%;
+}
+
 .content  h1 {
 	text-align: center;
 	margin: 10px;
@@ -138,13 +142,10 @@ a:hover {
 p.cakepage {
 	border: 1px solid rgb(2, 132, 130);
 	padding: 10px;
-	margin: 5px;
+	margin-left: 20px;
+	margin-right: 20px;
 	border-radius: 10px;
 	text-align: left;
-}
-
-h1.cakepage {
-	margin-top: 50px;
 }
 
 /***********************/
