@@ -14,9 +14,5 @@
 				<img src="" />
 			</a>
 		</div>
-
-		<div class="centered">
-			<h1>Leave A Comment</h1>
-		</div>
 	</div>
 <?php include "footer.php"; ?>

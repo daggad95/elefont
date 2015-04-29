@@ -11,11 +11,11 @@ body, .content strong {
 	font-family: 'Euphoria Script', cursive;
 }
 
-#navbar a, .content  p {
+#navbar a, .content  p, form input, form textarea, select, #addcomment {
 	font-family: Helvetica, Arial, sans-serif;
 }
 
-a, body {
+a, body, form input, form textarea, select {
 	color: rgb(2, 132, 130);
 }
 
@@ -29,6 +29,7 @@ a:hover {
 
 .content {
 	margin-top: 50px;
+	margin-bottom: 50px;
 	width: 40%;
 	min-width: 400px;
 	margin-left: auto;
@@ -70,6 +71,10 @@ a:hover {
 	width: 45%;
 	margin-left: 2.5%;
 	margin-right: 2.5%;
+}
+
+.shiftdown {
+	margin-top: 100px;
 }
 
 /***********************/
@@ -149,8 +154,68 @@ p.cakepage {
 }
 
 /***********************/
-/********CONTACT********/
+/*********ABOUT*********/
 /***********************/
+#addcomment {
+	font-size: 14pt;
+	margin-top: 10px;
+	padding: 10px;
+	border: 1px solid;
+	border-radius: 10px;
+}
+
+#addcomment:hover {
+	color: rgb(255, 102, 102);
+}
+
+form {
+	font-size: 24pt;
+	font-weight: bold;
+	width: 75%;
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px solid rgb(2, 132, 130);
+	padding: 10px;
+	border-radius: 10px;
+}
+
+form input, form textarea, select {
+	font-size: 14pt;
+}
+
+form textarea {
+	width: 90%;
+	height: 100px;
+	resize: none;
+}
+
+form input {
+	text-align: center;
+}
+
+form input[type=submit] {
+	background-color: white;
+	border-radius: 10px;
+	border: 1px solid rgb(2, 132, 130);
+	width: 175px;
+	height: 30px;
+}
+form input[type=submit]:hover {
+	background-color: rgba(255, 102, 102, 0.5);
+}
+
+select {
+	background-color: white;
+	border-radius: 3px;
+	border: 1px solid rgb(2, 132, 130);
+}
+
+.comment {
+	padding: 20px;
+	margin: 20px;
+	border-bottom: 1px solid rgb(2, 132, 130);
+}
+
 
 /***********************/
 /*********BLOG**********/
