@@ -15,6 +15,7 @@
 			<a href="about.php">About</a>
 			<a href="contact.php">Contact</a>
 			<a href="blog.php">Blog</a>
+			<a href="gallery.php">Gallery</a>
 		</div>
 		<div id="stylebar">
 			<div>
